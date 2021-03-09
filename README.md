@@ -1,5 +1,7 @@
 # README
 
+*Testing my git flow
+
 This README would normally document whatever steps are necessary to get the
 application up and running.
 
