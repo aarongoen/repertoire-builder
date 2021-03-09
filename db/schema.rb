@@ -10,7 +10,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_03_09_025908) do
+ActiveRecord::Schema.define(version: 2021_03_09_145438) do
+
+  create_table "comments", force: :cascade do |t|
+    t.string "text"
+    t.integer "piece_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
 
   create_table "pieces", force: :cascade do |t|
     t.string "name"
@@ -18,7 +25,7 @@ ActiveRecord::Schema.define(version: 2021_03_09_025908) do
     t.integer "length"
     t.string "key"
     t.string "period"
-    t.integer "like"
+    t.boolean "like"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

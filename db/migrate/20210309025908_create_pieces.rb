@@ -6,7 +6,7 @@ class CreatePieces < ActiveRecord::Migration[6.1]
       t.integer :length
       t.string :key
       t.string :period
-      t.integer :like
+      t.boolean :like
 
       t.timestamps
     end
