@@ -12,29 +12,58 @@
 require 'nokogiri'
 require 'open-uri'
 
-pieces = [{"url"=>"imslp.org/wiki/Adoration_(Reuchsel,_Maurice)", "name"=>"Adoration", "composer"=>"Reuchsel, Maurice"},
-    {"url"=>"imslp.org/wiki/Adorazione_(Caudana,_Federico)", "name"=>"Adorazione", "composer"=>"Caudana, Federico"},
+pieces = [{"url"=>"imslp.org/wiki/Adoration_(Reuchsel,_Maurice)", 
+    "name"=>"Adoration",
+     "composer"=>"Reuchsel, Maurice", 
+     "img_url"=>"https://imslp.org/wiki/File:PMLP942429-E300731_46-47-SIBLEY1802.4424.8993-Joubert_-_Maitre_-_vol_2_pt_2.pdf"},
+    {"url"=>"imslp.org/wiki/Adorazione_(Caudana,_Federico)", 
+        "name"=>"Adorazione", 
+        "composer"=>"Caudana, Federico", 
+        "img_url"=>"imslp.org/wiki/File:PMLP792373-adorazione_caudana.pdf"},
     {"url"=>"imslp.org/wiki/25_Advanced_Pedal_Studies_(Nevin,_Gordon_Balch)",
      "name"=>"25 Advanced Pedal Studies",
-     "composer"=>"Nevin, Gordon Balch"},
+     "composer"=>"Nevin, Gordon Balch",
+     "img_url"=>"https://imslp.org/wiki/File:Nevin_25_Advanced_Pedal_Studies.jpg"},
     {"url"=>"imslp.org/wiki/Advent_%27First_Religious_Suite_for_Organ%27_(Yon,_Pietro)",
      "name"=>"Advent 'First Religious Suite for Organ'",
-     "composer"=>"Yon, Pietro"},
+     "composer"=>"Yon, Pietro",
+    "img_url"=>"https://imslp.eu/files/imglnks/euimg/d/d9/IMSLP294053-PMLP477027-Yon_Advent_(First_Religious_Suite).pdf"},
     {"url"=>"imslp.org/wiki/Advent_and_Christmas_(Titcomb,_Everett)",
      "name"=>"Advent and Christmas",
-     "composer"=>"Titcomb, Everett"},
-    {"url"=>"imslp.org/wiki/Advent_to_Whitsuntide_(Sowerby,_Leo)", "name"=>"Advent to Whitsuntide", "composer"=>"Sowerby, Leo"},
+     "composer"=>"Titcomb, Everett",
+    "img_url"=>"https://imslp.org/wiki/File:Titcomb_Advent_and_Christmas.jpg"},
+    {"url"=>"imslp.org/wiki/Advent_to_Whitsuntide_(Sowerby,_Leo)", 
+        "name"=>"Advent to Whitsuntide", 
+        "composer"=>"Sowerby, Leo",
+    "img_url"=>"https://imslp.org/wiki/File:Sowerby_Advent_to_Whitsuntide_(Manual_and_Pedal_version).jpg"},
     {"url"=>"imslp.org/wiki/Advent,_Op.28_(Matthison-Hansen,_Gottfred)",
      "name"=>"Advent, Op.28",
-     "composer"=>"Matthison-Hansen, Gottfred"},
-    {"url"=>"imslp.org/wiki/Agilmente_(%C5%A0kop,_V%C3%A1clav_Felix)", "name"=>"Agilmente", "composer"=>"Škop, Václav Felix"},
-    {"url"=>"imslp.org/wiki/Agnus_Dei_(Redford,_John)", "name"=>"Agnus Dei", "composer"=>"Redford, John"},
-    {"url"=>"imslp.org/wiki/Agnus_(Josquin_Desprez)", "name"=>"Agnus", "composer"=>"Josquin Desprez"}]
+     "composer"=>"Matthison-Hansen, Gottfred",
+    "img_url"=>"https://cdn.imslp.org/images/thumb/pdfs/b9/1440c4c7f645d9877254b3c9c13f06b4e383780f.png"},
+    {"url"=>"imslp.org/wiki/Agilmente_(%C5%A0kop,_V%C3%A1clav_Felix)", 
+        "name"=>"Agilmente", 
+        "composer"=>"Škop, Václav Felix",
+    "img_url"=>"https://cdn.imslp.org/images/thumb/pdfs/c6/e754c87bbc250d220c63dc4bf40a28a24fb5b561.png"},
+    {"url"=>"imslp.org/wiki/Agnus_Dei_(Redford,_John)", 
+        "name"=>"Agnus Dei", 
+        "composer"=>"Redford, John",
+    "img_url"=>"https://cdn.imslp.org/images/thumb/pdfs/ef/6b03f1868d2c97e6c4fc93287caf22cc14610d5c.png
+    "},
+    {"url"=>"imslp.org/wiki/Agnus_(Josquin_Desprez)", 
+        "name"=>"Agnus", 
+        "composer"=>"Josquin Desprez",
+        "img_url"=>"https://cdn.imslp.org/images/thumb/pdfs/fc/f5457ebde8f99c2eea9e785fe00d74a96289d2b5.png"}]
 
-def seed_pieces(pieces) 
-    pieces.each do |p|
-        Piece.create p
-    end
+pieces.each do |p|
+    Piece.create p
+end
+
+comments = [{"text"=>"This is a good one.", "piece_id"=>"1"}, 
+            {"text"=>"I can't learn this on time.", "piece_id"=>"2"},
+            {"text"=>"A bucket list one.", "piece_id"=>"3"}]
+
+comments.each do |c|
+    Comment.create c
 end
 
 # binding.pry
