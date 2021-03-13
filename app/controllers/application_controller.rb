@@ -1,4 +1,5 @@
 class ApplicationController < ActionController::API
     require 'nokogiri'
-    require
+    require 'open-uri'
+    require 'pry'
 end

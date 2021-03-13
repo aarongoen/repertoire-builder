@@ -1,7 +1,6 @@
 class PiecesController < ApplicationController
     def index
-        pieces = Piece.all
-        render json: pieces
+        render json: Piece.all.to_json(include: :comments)
     end
 
     def show
