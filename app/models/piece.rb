@@ -1,5 +1,8 @@
 class Piece < ApplicationRecord
+    include ActiveModel::Serialization 
     has_many :comments
+
+   
 
     # attr_accessor :name, :composer, :length, :key, :period, :like, :comments
     
