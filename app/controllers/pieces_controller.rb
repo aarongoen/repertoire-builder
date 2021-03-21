@@ -13,7 +13,17 @@ class PiecesController < ApplicationController
         if piece.save   
             render json: piece
         else
-            render json: 'there is an error in json through pieces controller' 
+            render json: 'there is an error in creating json through pieces controller.' 
+        end
+    end
+
+    def update
+        piece = Piece.find(piece_params[:id])
+        piece.update(piece_params)
+        if piece.update
+            render json: piece
+        else 
+            render json: 'There is an error in updating json through pieces controller.'
         end
     end
 
