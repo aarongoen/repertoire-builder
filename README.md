@@ -5,17 +5,17 @@ Repertoire Builder is an app where a where organists can discover scores to prev
 ## Download and Install
 
     Clone the [Repertoire Builder API Repo](https://github.com/aarongoen/repertoire-builder)
+### For the API
 
-    ### For the API
     * Run bundle install from the API folder.
     * Migrate and seed the database with 'rails db:migrate' and 'rails db:seed'.
     * Start the server with 'rails s'.
+### For the Frontend
 
-    ### For the Frontend
     * Clone the [Frontend Repo](https://github.com/aarongoen/frontend.git)
     * Open 'index.html' to discover new scores.
 
-    The program is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
+The program is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
 
 
 
