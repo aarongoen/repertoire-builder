@@ -4,7 +4,7 @@ Repertoire Builder is an app where a where organists can discover scores to prev
 
 ## Download and Install
 
-    Clone the [Repertoire Builder API Repo](https://github.com/aarongoen/repertoire-builder.git)
+    Clone the [Repertoire Builder API Repo](https://github.com/aarongoen/repertoire-builder)
 
     ### For the API
     * Run bundle install from the API folder.
@@ -14,6 +14,8 @@ Repertoire Builder is an app where a where organists can discover scores to prev
     ### For the Frontend
     * Clone the [Frontend Repo](https://github.com/aarongoen/frontend.git)
     * Open 'index.html' to discover new scores.
+
+    The program is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
 
 
 
